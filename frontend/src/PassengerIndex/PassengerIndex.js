@@ -9,7 +9,7 @@ export class PassengerIndex extends React.Component {
     }
     
     componentDidMount(){
-        fetch('http://localhost:3001/api/passengers')
+        fetch('http://35.226.173.154/api/passengers')
             .then( response => response.json())
             .then( passengers => this.setState({ 
                 passengers: passengers 
