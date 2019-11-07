@@ -9,7 +9,7 @@ export class PassengerIndex extends React.Component {
     }
     
     componentDidMount(){
-        fetch('http://localhost:3001/passengers')
+        fetch('http://localhost:3001/api/passengers')
             .then( response => response.json())
             .then( passengers => this.setState({ 
                 passengers: passengers 
@@ -20,7 +20,6 @@ export class PassengerIndex extends React.Component {
         return (
             <div>
                 <h1>PassengerIndex</h1>
-                <Search />
                 <PassengerList passengers={this.state.passengers} />
             </div>
         );
