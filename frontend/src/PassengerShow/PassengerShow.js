@@ -21,7 +21,7 @@ export class PassengerShow extends React.Component {
 
     createTicket = (e) => {
         e.preventDefault()
-        fetch('http://localhost:3001/api/tickets', {
+        fetch('http://35.226.173.154 /api/tickets', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
