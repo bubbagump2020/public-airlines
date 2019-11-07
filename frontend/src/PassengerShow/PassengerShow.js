@@ -14,14 +14,14 @@ export class PassengerShow extends React.Component {
         fetch(`http://35.226.173.154 /api/passengers/${this.props.match.params.id}`)
             .then( response => response.json())
             .then( passenger => this.setState({ passenger: passenger }))
-        fetch(`http://localhost:3001/api/airlines`)
+        fetch(`http://35.226.173.154 /api/airlines`)
             .then( response => response.json())
             .then( airlines => this.setState({ airlines: airlines }))
     }
 
     createTicket = (e) => {
         e.preventDefault()
-        fetch('http://35.226.173.154 /api/tickets', {
+        fetch('http://35.226.173.154/api/tickets', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
